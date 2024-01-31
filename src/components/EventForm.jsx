@@ -1,43 +1,32 @@
 import { useContext, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+import {AuthContext} from "../context/AuthContext.jsx";
 
 const EventForm = () => {
   const [data, setData] = useState(initialValues)
-  
-  const handleName = (e)=>{
-    setName(
-    e.target.value
-      )
-    //finish this 
-    }
-    const { fetchWithToken } = useContext(AuthContext)
-    const handleTime = (e)=>{
-    //finish this 
-    setTime(
-      e.target.value
-     )
-    }
-    
-    const handleEventDuration = (e)=>{
-      //finish this 
-      setEventDuration(
-        e.target.value
-      )
-    }
-    
-    const handleLocation = (e)=>{
-        //finish this 
-        setLocation(
-          e.target.value
-        )
-      }
-    
-    const handleUser = (e)=>{
-          //finish this 
-          setUser(
-            e.target.value
-          )
+  const navigate = useNavigate()
+  const { fetchWithToken } = useContext(AuthContext)
+   
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const dogToCreate = data;
+    console.log("Dog to Create:", dogToCreate)
+    try {
+        const response = await fetchWithToken('/dogs', 'POST', dogToCreate)
+        if (response.status === 201) {
+            const dog = await response.json()
+            console.log(dog)
+            navigate(`/dogs/${dog._id}`)
+        } else {
+            console.log('Something went wrong')
         }
+    } catch (error) {
+        console.error(error)
+    }
+};
+
+
     return  <div className="flex justify-center items-center">
     <form className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
       <div className="mb-4">
