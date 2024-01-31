@@ -1,11 +1,8 @@
-import { useState } from 'react'
+import { useContext, useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 const EventForm = () => {
-  const [name, setName] = useState ('');
-  const [time, setTime] = useState (0);
-  const [eventDuration, setEventDuration] = useState (0);
-  const [location, setLocation] = useState ('');
-  const [user, setUser] = useState ('');
+  const [data, setData] = useState(initialValues)
   
   const handleName = (e)=>{
     setName(
@@ -13,7 +10,7 @@ const EventForm = () => {
       )
     //finish this 
     }
-    
+    const { fetchWithToken } = useContext(AuthContext)
     const handleTime = (e)=>{
     //finish this 
     setTime(
