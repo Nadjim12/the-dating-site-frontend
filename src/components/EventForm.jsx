@@ -2,11 +2,28 @@ import { useContext, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import {AuthContext} from "../context/AuthContext.jsx";
 
+const initialValues = {
+  'name':'',
+  'picture':'',
+  'age':0,
+  'breed':'',
+  'user':'',
+  'civilStatus':'',
+  'size':'',
+}
+
 const EventForm = () => {
   const [data, setData] = useState(initialValues)
   const navigate = useNavigate()
   const { fetchWithToken } = useContext(AuthContext)
    
+  const handleChange = (e)=>{
+    const {name, value} = e.target;
+    setData(prevState => ({
+        ...prevState,
+        [name]:value,
+    }));
+}
 
   const handleSubmit = async (e) => {
     e.preventDefault();
