@@ -44,7 +44,7 @@ const EventForm = () => {
 };
 
 
-    return  <div className="flex justify-center items-center">
+    return  <div className="flex justify-center h-screen items-center mb-6">
     <form className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 mx-auto">
       <div className="mb-4">
         <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="email">
