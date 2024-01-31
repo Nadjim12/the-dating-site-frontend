@@ -10,14 +10,14 @@ const EventForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const dogToCreate = data;
-    console.log("Dog to Create:", dogToCreate)
+    const eventToCreate = data;
+    console.log("Event to Create:", eventToCreate)
     try {
-        const response = await fetchWithToken('/dogs', 'POST', dogToCreate)
+        const response = await fetchWithToken('/events', 'POST', eventToCreate)
         if (response.status === 201) {
-            const dog = await response.json()
-            console.log(dog)
-            navigate(`/dogs/${dog._id}`)
+            const event = await response.json()
+            console.log(event)
+            navigate(`/events/${event._id}`)
         } else {
             console.log('Something went wrong')
         }
