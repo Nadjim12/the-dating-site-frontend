@@ -34,7 +34,7 @@ const EventForm = () => {
           Name
           <input className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 
           leading-tight focus:outline-none focus:shadow-outline"
-           type="text" required value={name} onChange={handleName}/>
+           type="text" required value={data.name} onChange={handleChange}/>
         </label>
       </div>
       <div className="mb-4">
@@ -45,8 +45,8 @@ const EventForm = () => {
               type="Date"
               placeholder="time"
               required
-              value={time}
-              onChange={handleTime}
+              value={data.time}
+              onChange={handleChange}
           />
         </label>
      </div>
@@ -60,8 +60,8 @@ const EventForm = () => {
               type="Number"
               placeholder="number"
               required
-              value={eventDuration}
-              onChange={handleEventDuration}
+              value={data.eventDuration}
+              onChange={handleChange}
           />
         </label>
      </div>
@@ -74,8 +74,8 @@ const EventForm = () => {
               type="Number"
               placeholder="place"
               required
-              value={location}
-              onChange={handleLocation}
+              value={data.location}
+              onChange={handleChange}
           />
         </label>
      </div>
@@ -88,8 +88,8 @@ const EventForm = () => {
               type="Schema"
               placeholder="user"
               required
-              value={user}
-              onChange={handleUser}
+              value={data.user}
+              onChange={handleChange}
           />
         </label>
      </div>
