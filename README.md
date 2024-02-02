@@ -1,4 +1,3 @@
-Working in Progress
 The Dating Site Frontend
 This is the frontend for a dating site for dog-lovers who want to date or simply meet up. Users can sign up, create profiles, browse events, and interact with other users through their dogs.
 Technologies Used
