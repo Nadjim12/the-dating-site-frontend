@@ -17,7 +17,7 @@ bash
 
 npm install 3. Set the environment variables:
 Copy the contents of env.example file and create a new file called .env in the root directory. Set the necessary environment variables, such as the API endpoint URL. 4. Start the development server:
-bash
+bash 
 
 npm start 5. Open the application in your browser:
 The application should be running on http://localhost:3000 by default. Open your browser and navigate to that URL to view the application.
