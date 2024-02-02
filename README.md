@@ -12,33 +12,29 @@ Clone the repository:
 bash
 
 git clone https://github.com/your-username/the-dating-site-frontend.git
-cd the-dating-site-frontend
-2. Install the dependencies:
+cd the-dating-site-frontend 2. Install the dependencies:
 bash
 
-npm install
-3. Set the environment variables:
-Copy the contents of env.example file and create a new file called .env in the root directory. Set the necessary environment variables, such as the API endpoint URL.
-4. Start the development server:
+npm install 3. Set the environment variables:
+Copy the contents of env.example file and create a new file called .env in the root directory. Set the necessary environment variables, such as the API endpoint URL. 4. Start the development server:
 bash
 
-npm start
-5. Open the application in your browser:
+npm start 5. Open the application in your browser:
 The application should be running on http://localhost:3000 by default. Open your browser and navigate to that URL to view the application.
 Project Structure
 src/
-  |- components/          # Reusable components
-  |- pages/               # Page components
-  |- services/            # API service functions
-  |- utils/               # Utility functions
-  |- styles/              # CSS/SASS stylesheets
-  |- App.js               # Root component
-  |- index.js             # Entry point
-  |- routes.js            # React Router configuration
+|- components/ # Reusable components
+|- pages/ # Page components
+|- services/ # API service functions
+|- utils/ # Utility functions
+|- styles/ # CSS/SASS stylesheets
+|- App.js # Root component
+|- index.js # Entry point
+|- routes.js # React Router configuration
 public/
-  |- index.html           # HTML template
-  |- favicon.ico          # Favicon
-  |- assets/              # Static assets (images, etc.)
+|- index.html # HTML template
+|- favicon.ico # Favicon
+|- assets/ # Static assets (images, etc.)
 Features
 User signup and authentication
 User profile creation and management
